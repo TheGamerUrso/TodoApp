@@ -1,30 +1,24 @@
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text.Encodings.Web;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TodoApp.Models;
 
 namespace TodoApp.Controllers;
 
-public class HomeController : Controller
+public class TodoController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<TodoController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public TodoController(ILogger<TodoController> logger)
     {
         _logger = logger;
     }
 
     public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Welcome()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
     {
         return View();
     }
