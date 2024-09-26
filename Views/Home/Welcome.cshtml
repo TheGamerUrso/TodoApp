@@ -1,11 +1,14 @@
-@page
-@model TodoApp.Views.Home.Welcome
 @{
-    ViewData["Title"] = "Welcome";
+    ViewData["Title"] = "Privacy Policy";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <div>
-    
+    <ul>
+    @for (int i = 0; i < (int)ViewData["NumTimes"]!; i++)
+    {
+        <li>@ViewData["Message"]</li>
+    }
+    </ul>
 </div>
